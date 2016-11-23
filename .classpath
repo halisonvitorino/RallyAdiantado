@@ -15,5 +15,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Users/halison.vitorino/Documents/Desenvolvimento/mysql-connector-java-5.0.8.zip"/>
 	<classpathentry kind="lib" path="C:/Users/halison.vitorino/Documents/Desenvolvimento/hibernate-release-5.2.4.Final.zip"/>
+	<classpathentry kind="lib" path="C:/Users/uc14101120/Downloads/apache-maven-3.3.9-bin.zip"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
