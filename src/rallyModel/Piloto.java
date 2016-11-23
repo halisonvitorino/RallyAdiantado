@@ -4,8 +4,21 @@ public class Piloto {
 	
 	private int idPiloto;
 	private String nomePiloto;
+	private int posicaoPiloto;
 	
 	
+
+	public int getPosicaoPiloto() {
+		return posicaoPiloto;
+	}
+
+
+
+	public void setPosicaoPiloto(int posicaoPiloto) {
+		this.posicaoPiloto = posicaoPiloto;
+	}
+
+
 
 	public int getIdPiloto() {
 		return idPiloto;
