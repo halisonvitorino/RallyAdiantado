@@ -1,7 +1,16 @@
 package rallyModel;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+@Entity
 public class Pista {
 	
+	@Id
+	@GeneratedValue
 	private int idPista;
 	private String nomePista;
 	private String localPista;
