@@ -20,6 +20,7 @@ public class carroDAO {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		return (Carro) session.load(Carro.class, id);
 		}
+		
 		@SuppressWarnings({ "unchecked", "rawtypes" })
 		public List<Carro> list() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -28,18 +29,20 @@ public class carroDAO {
 		t.commit();
 		return lista;
 		}
+		
 		public void remove(Carro carro) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
 		session.delete(carro);
 		t.commit();
 		}
+		
 		public void update(Carro carro) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
 		session.update(carro);
 		t.commit();
 		}
-		}
+	}
 
 }
