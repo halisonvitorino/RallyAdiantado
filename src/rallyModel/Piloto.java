@@ -4,18 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
 @Entity
 public class Piloto {
-	
 	
 	@Id
 	@GeneratedValue
 	private int idPiloto;
 	private String nomePiloto;
 	private int posicaoPiloto;
-	
-	
+		
 	public int getPosicaoPiloto() {
 		return posicaoPiloto;
 	}
@@ -44,5 +41,4 @@ public class Piloto {
 	
 		// TODO Auto-generated constructor stub
 	}
-
 }

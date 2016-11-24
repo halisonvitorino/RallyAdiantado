@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
 @Entity
 public class equipe {
 		
@@ -35,6 +34,4 @@ public class equipe {
 		
 		// TODO Auto-generated constructor stub
 	}
-	
-
 }
