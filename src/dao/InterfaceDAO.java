@@ -1,4 +1,4 @@
-package rallyDAO;
+package dao;
 
 import java.util.List;
 

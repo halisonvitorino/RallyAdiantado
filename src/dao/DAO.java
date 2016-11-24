@@ -1,48 +1,74 @@
-package rallyDAO;
+package dao;
 
-import rallyModel.Carro;
 import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import Utils.HibernateUtils.HibernateUtil;
 
-public class carroDAO {
-	
-	public class carroDao {
-		 
-		public void save(Carro carro) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction t = session.beginTransaction();
-		session.save(carro);
-		t.commit();
-		}
-		public Carro getCarro(long id) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		return (Carro) session.load(Carro.class, id);
-		}
-		
-		@SuppressWarnings({ "unchecked", "rawtypes" })
-		public List<Carro> list() {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction t = session.beginTransaction();
-		List lista = session.createQuery("from carro").list();
-		t.commit();
-		return lista;
-		}
-		
-		public void remove(Carro carro) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction t = session.beginTransaction();
-		session.delete(carro);
-		t.commit();
-		}
-		
-		public void update(Carro carro) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction t = session.beginTransaction();
-		session.update(carro);
-		t.commit();
-		}
+public class DAO implements InterfaceDAO {
+
+	private static SessionFactory sessao;
+	private Transaction transacao;
+
+	@Override
+	public void save(Object bean) {
+		sessao = HibernateUtil.getSessionFactory();
+		transacao = sessao.beginTransaction();
+		sessao.save(obj);
+		sessao.flush();
+		transacao.commit();
+		sessao.close();
+
 	}
 
+	@Override
+	public Object getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+
+	public List<Object> getAll() {
+		sessao = HibernateUtil.getSessionFactory();
+        transacao = sessao.beginTransaction();
+        List objts;
+        objts = null;
+        Criteria selectAll = sessao.createCriteria(clazz);
+        transacao.commit();
+        objts = selectAll.list();
+        sessao.close();
+        return objts;
+	}
+
+	@Override
+	public void remove(int id) {
+		sessao = HibernateUtil.getSessionFactory();
+        transacao = sessao.beginTransaction();
+        sessao.delete(obj);
+        sessao.flush();
+        transacao.commit();
+        sessao.close();
+	}
+
+	@Override
+	public void update(Object bean) {
+		sessao = HibernateUtil.getSessionFactory();
+        transacao = sessao.beginTransaction();
+        sessao.update(obj);
+        sessao.flush();
+        transacao.commit();
+        sessao.close();
+	}
+	
+	public void closeConnection() throws Exception
+    {
+            sessao = HibernateUtil.getSessionFactory();
+            sessao.connection().createStatement().execute("SHUTDOWN");
+    }
+	
+	
 }
