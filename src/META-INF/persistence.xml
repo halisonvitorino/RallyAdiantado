@@ -3,8 +3,8 @@
 	<persistence-unit name="RallyMonitor">
 		<class>rallyModel.Piloto</class>
 		<class>rallyModel.Pista</class>
-		<class>rallyModel.carro</class>
-		<class>rallyModel.equipe</class>
+		<class>rallyModel.Carro</class>
+		<class>rallyModel.Equipe</class>
 	<properties>
 	<property name="hibernate.archive.autodetection" value="RallyModel.carro"/>
 	</properties>

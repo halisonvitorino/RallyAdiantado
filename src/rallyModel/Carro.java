@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class carro {
+public class Carro {
 		
 	@Id
 	@GeneratedValue
@@ -37,7 +37,7 @@ public class carro {
 		this.numeroCarro = numeroCarro;
 	}
 
-	public carro() {
+	public Carro() {
 	
 	}
 }

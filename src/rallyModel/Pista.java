@@ -31,7 +31,7 @@ public class Pista {
 	public void setLocalPista(String localPista) {
 		this.localPista = localPista;
 	}
+	
 	public Pista() {
-		
 	}
 }

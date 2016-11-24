@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class equipe {
+public class Equipe {
 		
 	@Id
 	@GeneratedValue
@@ -30,7 +30,7 @@ public class equipe {
 	public void setNumeroEquipe(int numeroEquipe) {
 		this.numeroEquipe = numeroEquipe;
 	}
-	public equipe() {
+	public Equipe() {
 		
 		// TODO Auto-generated constructor stub
 	}
