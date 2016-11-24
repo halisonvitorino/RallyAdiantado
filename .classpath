@@ -13,8 +13,14 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/halison.vitorino/Documents/Desenvolvimento/mysql-connector-java-5.0.8.zip"/>
-	<classpathentry kind="lib" path="C:/Users/halison.vitorino/Documents/Desenvolvimento/hibernate-release-5.2.4.Final.zip"/>
-	<classpathentry kind="lib" path="C:/Users/uc14101120/Downloads/apache-maven-3.3.9-bin.zip"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/Hibernate/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/JSF/jsf-api-2.0.jar"/>
+	<classpathentry kind="lib" path="Bibliotecas/MySQL/mysql-connector-java-5.0.8-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
