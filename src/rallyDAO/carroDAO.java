@@ -16,27 +16,28 @@ public class carroDAO {
 		session.save(carro);
 		t.commit();
 		}
-		public Carro getLivro(long id) {
+		public Carro getCarro(long id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		return (Carro) session.load(Carro.class, id);
 		}
-		public List<livro> list() {
+		@SuppressWarnings({ "unchecked", "rawtypes" })
+		public List<Carro> list() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		List lista = session.createQuery("from Livro").list();
+		List lista = session.createQuery("from carro").list();
 		t.commit();
 		return lista;
 		}
-		public void remove(Livro livro) {
+		public void remove(Carro carro) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		session.delete(livro);
+		session.delete(carro);
 		t.commit();
 		}
-		public void update(Livro livro) {
+		public void update(Carro carro) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		session.update(livro);
+		session.update(carro);
 		t.commit();
 		}
 		}

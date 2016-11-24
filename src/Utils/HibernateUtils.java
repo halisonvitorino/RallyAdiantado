@@ -1,22 +1,20 @@
 package Utils;
 
 import org.hibernate.SessionFactory;
-import rallyModel.Carro;
 
-@SuppressWarnings("deprecation")
 public class HibernateUtils {
 	
-	public class HibernateUtil {
+	public static class HibernateUtil {
 		 
-		private SessionFactory sessionFactory;
+		private static SessionFactory sessionFactory;
 		 
 		private HibernateUtil() {
 		}
 		 
-		public SessionFactory getSessionFactory() {
+		public static SessionFactory getSessionFactory() {
 		if (sessionFactory == null) {
 		try {
-		sessionFactory = ac.configure().buildSessionFactory();
+		sessionFactory = getSessionFactory();
 		} catch (Throwable ex) {
 				
 			
