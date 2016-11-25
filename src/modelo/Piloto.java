@@ -1,5 +1,6 @@
 package modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,8 +10,11 @@ public class Piloto {
 	
 	@Id
 	@GeneratedValue
+	@Column
 	private int idPiloto;
+	@Column
 	private String nomePiloto;
+	@Column
 	private int posicaoPiloto;
 		
 	public int getPosicaoPiloto() {

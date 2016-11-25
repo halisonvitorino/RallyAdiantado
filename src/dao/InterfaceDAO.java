@@ -9,4 +9,5 @@ public interface InterfaceDAO {
 	public List<Object> getAll();
 	public void remove(int id);
 	public void update(Object bean);
+	
 }

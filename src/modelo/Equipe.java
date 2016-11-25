@@ -1,5 +1,6 @@
 package modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,9 +10,13 @@ public class Equipe {
 		
 	@Id
 	@GeneratedValue
+	@Column
 	private int idEquipe;
+	@Column
 	private String nomeEquipe;
+	@Column
 	private int numeroEquipe;
+
 	public int getIdEquipe() {
 		return idEquipe;
 	}

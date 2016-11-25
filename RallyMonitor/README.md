@@ -1,2 +1,0 @@
-# RallyMonitor
-Trabalho final

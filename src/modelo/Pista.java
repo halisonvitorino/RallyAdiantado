@@ -1,5 +1,6 @@
 package modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,8 +10,11 @@ public class Pista {
 	
 	@Id
 	@GeneratedValue
+	@Column
 	private int idPista;
+	@Column
 	private String nomePista;
+	@Column
 	private String localPista;
 		
 	public int getIdPista() {
